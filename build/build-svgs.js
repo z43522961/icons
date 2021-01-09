@@ -23,7 +23,7 @@ const svgAttributes = {
 }
 
 async function getSvgoConfig() {
-  const svgoConfigFile = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
+  const svgoConfigFile = await fs.readFile(path.join(__dirname, './svgo.yml'), 'utf8')
 
   return yaml.load(svgoConfigFile)
 }
