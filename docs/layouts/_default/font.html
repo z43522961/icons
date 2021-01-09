@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     {{ partial "header" . }}
+
+    <link rel="stylesheet" href="bootstrap-icons.css">
   </head>
-  <body id="icons-body">
+  <body id="icons-body" class="text-center">
     {{ partialCached "skippy" . }}
-    {{ partialCached "navbar" . "single" }}
-    {{ partialCached "hero" . }}
+    {{ partialCached "navbar" . "fonts" }}
 
     <main class="container" id="content" role="main">
+      {{ partialCached "icons" . "fonts" }}
+
       {{ .Content }}
     </main>
 
     {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . "fonts" }}
   </body>
 </html>

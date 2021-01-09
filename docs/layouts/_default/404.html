@@ -5,12 +5,12 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     {{ partialCached "skippy" . }}
-    {{ partialCached "navbar" . }}
+    {{ partialCached "navbar" . "404" }}
 
     <main class="my-auto p-5" id="content" role="main">
       {{ .Content }}
     </main>
 
-    {{- partialCached "scripts" . .IsHome }}
+    {{- partialCached "scripts" . "404" }}
   </body>
 </html>
