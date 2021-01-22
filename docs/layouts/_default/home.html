@@ -5,16 +5,16 @@
   </head>
   <body id="icons-body">
     {{ partialCached "skippy" . }}
-    {{ partialCached "navbar" . }}
+    {{ partialCached "navbar" . "home" }}
     {{ partialCached "hero" . }}
 
     <main class="container" id="content" role="main">
-      {{ partial "icons" . }}
+      {{ partialCached "icons" . "home" }}
 
       {{ .Content }}
     </main>
 
     {{- partialCached "footer" . }}
-    {{- partialCached "scripts" . .IsHome }}
+    {{- partialCached "scripts" . "home" }}
   </body>
 </html>
